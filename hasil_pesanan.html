@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Pesanan Pizza</title>
+    
+</head>
+<body>
+
+<form>
+<fieldset>
+<div class="container">
+    <h1>Ringkasan Pesanan Pizza Anda</h1>
+    <p>Terima kasih! Berikut adalah detail pesanan yang Anda masukkan:</p>
+    
+    <ul id="hasil-pesanan">
+        <!-- Data akan dimasukkan secara otomatis oleh JavaScript -->
+    </ul>
+
+</div>
+</fieldset>
+</form>
+
+<script>
+    // 1. Mengambil parameter dari URL (hasil dari method="get")
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    // 2. Menangkap semua data inputan form
+    const nama = urlParams.get('customers');
+    const email = urlParams.get('email');
+    const alamat = urlParams.get('alamat');
+    const telepon = urlParams.get('telepon');
+    const instruksi = urlParams.get('instruksi pengiriman');
+    const roti = urlParams.get('roti');
+    const jumlah = urlParams.get('jumlah');
+
+    // Karena checkbox bisa dipilih lebih dari satu, gunakan getAll()
+    const toppings = urlParams.getAll('topping');
+    const toppingList = toppings.length > 0 ? toppings.join(', ') : 'Tidak ada topping yang dipilih';
+
+    // 3. Menampilkan data ke dalam elemen HTML
+    const listContainer = document.getElementById('hasil-pesanan');
+    listContainer.innerHTML = `
+        <li><strong>Nama:</strong> ${nama ? nama : '-'}</li>
+        <li><strong>Email:</strong> ${email ? email : '-'}</li>
+        <li><strong>Alamat:</strong> ${alamat ? alamat : '-'}</li>
+        <li><strong>Telepon:</strong> ${telepon ? telepon : '-'}</li>
+        <li><strong>Instruksi Pengiriman:</strong> ${instruksi ? instruksi : 'Tidak ada'}</li>
+        <li><strong>Jenis Roti:</strong> ${roti ? roti : '-'}</li>
+        <li><strong>Topping:</strong> ${toppingList}</li>
+        <li><strong>Jumlah (Quantity):</strong> ${jumlah ? jumlah : '-'}</li>
+    `;
+</script>
+
+</body>
+</html>

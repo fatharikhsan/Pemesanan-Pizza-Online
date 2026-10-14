@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>pemesanan pizza online</title>
+  </head>
+  <body>
+   
+<h1>form pemesanan pizza</h1>
+
+<p>silahkan isi form pemesanan pizza yang telah disediakan</p>
+
+<form action="8" method="post">
+ <fieldset>
+  <legend>Informasi pemesanan:</legend>
+  <p>
+  <label for="customers">Nama:</label><br>
+  <input type="text" id="customers" name="customers" required>
+  </p>
+
+  <p>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required>
+  </p>
+
+  <p>
+  <label for="address">address:</label><br>
+  <input type="text" id="address" name="address" required>
+  </p>
+
+  <p>
+  <label for="telephone">telephone:</label><br>
+  <input type="text" id="address" name="address" required>
+  </p>
+
+  <p>
+  <label for="instruction">delivery instruction:</label><br>
+  <textarea id="instruction" 
+            name="instruction" 
+            rows="4" 
+            cols="50" 
+            maxlength="4000" 
+            placeholder="no more than 4000 characters"></textarea>
+  </p>
+ 
+ </fieldset>
+
+ <br>
+
+<fieldset>
+<h2>Kreasikan Pizza-mu</h2>
+<p><strong>Pizza spesifikasi</strong></p>
+<p>Pilih Salah Satu</p>
+
+<p>
+    <input type="radio" id="CW" name="crust" value="classic white" required>
+    <label for="classic white">classic white</label><br>
+
+    <input type="radio" id="ML" name="crust" value="Meat lovers" required>
+    <label for="Meat lovers">Meat lovers</label><br>
+
+    <input type="radio" id="PPRNI" name="crust" value="Pepperoni" required>
+    <label for="Pepperoni">Pepperoni</label><br>
+
+    <input type="radio" id="CR" name="crust" value="chesse royal" required>
+    <label for="chesse royal">chesse royal</label><br>
+</p>
+
+<p>
+    <label for="quantity">Quantity:</label>
+    <select name="quantity" id="quantity">
+        <option value="">--pilih jumlah--</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Audi</option>
+    </select>
+    
+</p>
+</fieldset>
+
+<br>
+
+<input type="submit" value="Submit">
+
+</form>
+  </body>
+</html>

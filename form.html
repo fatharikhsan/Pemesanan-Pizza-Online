@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>pemesanan pizza online</title>
+  </head>
+  <body>
+   
+<h1>form pemesanan pizza</h1>
+
+<p>silahkan isi form pemesanan pizza yang telah disediakan</p>
+
+<form action="hasil_pesanan.html" method="get">
+ <fieldset>
+  <legend>Informasi pemesanan:</legend>
+  <p>
+  <label for="customers">Nama:</label><br>
+  <input type="text" id="customers" name="customers" required>
+  </p>
+
+  <p>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required>
+  </p>
+
+  <p>
+  <label for="alamat">address:</label><br>
+  <input type="text" id="alamat" name="alamat" required>
+  </p>
+
+  <p>
+  <label for="telepon">telephone:</label><br>
+  <input type="text" id="telepon" name="telepon" required>
+  </p>
+
+  <p>
+  <label for="instruksi pengiriman">Instruksi Pengiriman:</label><br>
+  <textarea id="instruksi pengiriman" 
+            name="instruksi pengiriman" 
+            rows="4" 
+            cols="50" 
+            maxlength="4000" 
+            placeholder="tidak boleh lebih dari 4000 karakter"></textarea>
+  </p>
+ </fieldset>
+ <br>
+
+<fieldset>
+<h2>Kreasikan Pizza-mu</h2>
+<p><strong>Pizza spesifikasi</strong></p>
+<p>Pilih Salah Satu</p>
+
+<p>
+    <input type="radio" id="thin_crispy" name="roti" value="thin & crispy" required>
+    <label for="thin & crispy">thin & crispy</label><br>
+
+    <input type="radio" id="classic_hand_tossed" name="roti" value="Classic Hand Tossed" required>
+    <label for="Classic Hand Tossed">Classic Hand Tossed</label><br>
+
+    <input type="radio" id="Pan_Pizza" name="roti" value="Pan Pizza" required>
+    <label for="Pan Pizza">Pan Pizza</label><br>
+
+    <input type="radio" id="stuffed_crust" name="roti" value="Stuffed Crust" required>
+    <label for="Stuffed Crust">Stuffed Crust</label><br>
+
+    <input type="radio" id="glutten_free" name="roti" value="Gluten Free" required>
+    <label for="Gluten Free">Gluten Free</label><br>
+</p>
+
+<p><strong>Topping</strong></p>
+<p>Pilih sesuai keinginan anda</p>
+
+<p>
+    <input type="checkbox" id="CM" name="topping" value="Cheese Mozarella">
+    <label for="Cheese Mozarella">Cheese Mozarella</label><br>
+
+    <input type="checkbox" id="ML" name="topping" value="Meat lovers">
+    <label for="Meat lovers">Meat lovers</label><br>
+
+    <input type="checkbox" id="PPRNI" name="topping" value="Pepperoni">
+    <label for="Pepperoni">Pepperoni</label><br>
+
+    <input type="checkbox" id="Sausage" name="topping" value="Sausage">
+    <label for="Sausage">Sausage</label><br>
+
+    <input type="checkbox" id="Veggies" name="topping" value="Veggies">
+    <label for="Veggies">Veggies</label><br>
+
+    <input type="checkbox" id="Pineapple" name="topping" value="Pineapple">
+    <label for="Pineapple">Pineapple</label><br>
+</p>
+
+<p>
+    <label for="jumlah">Quantity:</label>
+    <select name="jumlah" id="jumlah">
+        <option value="">--pilih jumlah--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    
+</p>
+</fieldset>
+
+<br>
+  
+<input type="submit" value="Deliver Pizza">
+
+</form>
+  </body>
+</html>
